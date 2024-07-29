@@ -244,7 +244,6 @@ button:hover {
 	background-color: #21867a;
 }
 
-/* Mood Tracker Styles */
 .mood-tracker {
 	display: flex;
 	justify-content: space-between;
@@ -264,12 +263,11 @@ button:hover {
 	transform: scale(1.1);
 }
 
-/* Mood colors from left to right: Dark Red, Light Red, Orange, Dark Yellow, Light Yellow */
-.mood-1 { background-color: #D98880; } /* Dark Red */
-.mood-2 { background-color: #F5B041; } /* Light Red */
-.mood-3 { background-color: #F7DC6F; } /* Orange */
-.mood-4 { background-color: #82E0AA; } /* Dark Yellow */
-.mood-5 { background-color: #58D68D; } /* Light Yellow */
+.mood-1 { background-color: #D98880; } 
+.mood-2 { background-color: #F5B041; }
+.mood-3 { background-color: #F7DC6F; }
+.mood-4 { background-color: #82E0AA; }
+.mood-5 { background-color: #58D68D; }
 
 .mood-label {
 	text-align: center;
