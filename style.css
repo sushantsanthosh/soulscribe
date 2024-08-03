@@ -1,266 +1,288 @@
 body {
-	font-family: "Raleway", sans-serif;
-	background-color: #e0f2e9;
-	margin: 0;
-	padding: 0;
+		font-family: "Raleway", sans-serif;
+		background-color: #e0f2e9;
+		margin: 0;
+		padding: 0;
+		color: #333;
+		transition: background-color 0.3s;
 }
 
 .header {
-	background-color: #264653;
-	padding: 10px 20px;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+		background-color: #264653;
+		padding: 20px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+		transition: background-color 0.3s, box-shadow 0.3s;
 }
 
 .header img {
-	max-width: 250px;
+		max-width: 150px;
+		height: auto;
 }
 
 .login-form {
-	display: flex;
-	align-items: center;
+		display: flex;
+		align-items: center;
 }
 
 .login-form input[type="text"],
 .login-form input[type="password"] {
-	padding: 5px;
-	margin-right: 10px;
-	border: 1px solid #ccc;
-	border-radius: 4px;
+		padding: 12px;
+		margin-right: 10px;
+		border: 1px solid #ccc;
+		border-radius: 8px;
+		font-size: 1em;
+		transition: border-color 0.3s;
+}
+
+.login-form input[type="text"]:focus,
+.login-form input[type="password"]:focus {
+		border-color: #2a9d8f;
 }
 
 .login-form button {
-	padding: 5px 10px;
-	background-color: #2a9d8f;
-	color: #fff;
-	border: none;
-	border-radius: 20px;
-	cursor: pointer;
-	font-family: "Raleway", sans-serif;
-	transition: background-color 0.3s;
+		padding: 12px 25px;
+		background-color: #2a9d8f;
+		color: #fff;
+		border: none;
+		border-radius: 20px;
+		cursor: pointer;
+		font-family: "Raleway", sans-serif;
+		transition: background-color 0.3s;
+		font-size: 1em;
 }
 
 .login-form button:hover {
-	background-color: #21867a;
+		background-color: #21867a;
 }
 
 .container {
-	max-width: 800px;
-	margin: 20px auto;
-	background-color: #f4f9f4;
-	padding: 20px;
-	border-radius: 8px;
-	box-shadow: 0 0 10px rgba(0,0,0,0.1);
+		max-width: 900px;
+		margin: 20px auto;
+		background-color: #f4f9f4;
+		padding: 30px;
+		border-radius: 12px;
+		box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
 .tabs {
-	overflow: hidden;
-	border-bottom: 1px solid #ccc;
-	margin-bottom: 20px;
+		overflow: hidden;
+		border-bottom: 1px solid #ccc;
+		margin-bottom: 20px;
 }
 
 .tab {
-	float: left;
-	cursor: pointer;
-	padding: 10px 20px;
-	transition: background-color 0.3s;
-	font-family: "Raleway", sans-serif;
+		float: left;
+		cursor: pointer;
+		padding: 15px 25px;
+		transition: background-color 0.3s, color 0.3s;
+		font-family: "Raleway", sans-serif;
+		font-size: 1em;
+		color: #333;
 }
 
 .tab:hover {
-	background-color: #e0f2e9;
+		background-color: #e0f2e9;
 }
 
 .tab.active {
-	background-color: #c3d3d4;
+		background-color: #2a9d8f;
+		color: #fff;
 }
 
 .content {
-	display: none;
-	padding: 20px 0;
-	opacity: 0;
-	transition: opacity 0.5s ease;
+		display: none;
+		padding: 20px 0;
+		opacity: 0;
+		transition: opacity 0.5s ease;
 }
 
 .content.active {
-	display: block;
-	opacity: 1;
+		display: block;
+		opacity: 1;
+}
+
+.content.meditation {
+		text-align: center;
 }
 
 .quote-container, .question-container {
-	margin-bottom: 20px;
+		margin-bottom: 30px;
 }
 
 .calendar {
-	margin-top: 20px;
+		margin-top: 30px;
 }
 
 .month {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin-bottom: 10px;
-	font-size: 1.5em;
-	font-weight: bold;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 20px;
+		font-size: 1.5em;
+		font-weight: bold;
 }
 
 .month .arrow {
-	cursor: pointer;
-	padding: 0 15px;
-	font-size: 1.5em;
-	transition: transform 0.2s, color 0.2s;
+		cursor: pointer;
+		padding: 0 15px;
+		font-size: 1.5em;
+		transition: transform 0.2s, color 0.2s;
 }
 
 .month .arrow:hover {
-	transform: scale(1.2);
-	color: #2a9d8f;
+		transform: scale(1.2);
+		color: #2a9d8f;
 }
 
 .weekdays {
-	display: flex;
-	justify-content: space-between;
-	border-bottom: 1px solid #ccc;
-	padding-bottom: 10px;
-	margin-bottom: 10px;
+		display: flex;
+		justify-content: space-between;
+		border-bottom: 1px solid #ccc;
+		padding-bottom: 10px;
+		margin-bottom: 10px;
 }
 
 .weekdays .day {
-	width: 14.2%;
-	text-align: center;
-	font-weight: bold;
+		width: 14.2%;
+		text-align: center;
+		font-weight: bold;
 }
 
 .days {
-	display: grid;
-	grid-template-columns: repeat(7, 1fr);
-	gap: 10px;
+		display: grid;
+		grid-template-columns: repeat(7, 1fr);
+		gap: 10px;
 }
 
 .day {
-	text-align: center;
-	padding: 10px;
-	border: 1px solid #ccc;
-	border-radius: 4px;
-	cursor: pointer;
+		text-align: center;
+		padding: 15px;
+		border: 1px solid #ccc;
+		border-radius: 8px;
+		cursor: pointer;
+		transition: background-color 0.3s;
 }
 
 .day.blank {
-	border: none;
-	cursor: default;
+		border: none;
+		cursor: default;
 }
 
 .day:hover:not(.blank) {
-	background-color: #c3d3d4;
+		background-color: #e0f2e9;
 }
 
 .journal-entries {
-	margin-top: 20px;
-	padding: 10px;
-	border: 1px solid #ccc;
-	border-radius: 4px;
-	background-color: #d6e8d6;
+		margin-top: 30px;
+		padding: 20px;
+		border: 1px solid #ccc;
+		border-radius: 8px;
+		background-color: #d6e8d6;
 }
 
 .journal-entries h3 {
-	margin-top: 0;
+		margin-top: 0;
 }
 
 .about-us {
-	margin-top: 40px;
+		margin-top: 50px;
 }
 
 .founder {
-	display: flex;
-	align-items: center;
-	margin-bottom: 20px;
+		display: flex;
+		align-items: center;
+		margin-bottom: 30px;
 }
 
 .founder-photo {
-	width: 100px;
-	height: 100px;
-	background-color: #ccc;
-	border-radius: 50%;
-	margin-right: 20px;
+		width: 120px;
+		height: 120px;
+		background-color: #ccc;
+		border-radius: 50%;
+		margin-right: 30px;
+		border: 4px solid #264653;
 }
 
 .founder-info {
-	flex: 1;
+		flex: 1;
 }
 
 .how-to-use {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 }
 
 .how-to-use .text {
-	flex: 1;
-	text-align: center;
-	padding: 0 20px;
+		flex: 1;
+		text-align: center;
+		padding: 0 30px;
 }
 
 .how-to-use .placeholder {
-	width: 100px;
-	background-color: #ccc;
-	margin: 0 20px;
+		width: 220px;
+		background-color: #ccc;
+		margin: 0 30px;
+		border-radius: 20%;
 }
 
 .resources .placeholder {
-	width: 400px;
-	background-color: #ccc;
-	margin: 0 20px;
-	margin-top: 30px;
-	margin-bottom: 30px;
-}
-
-.resources p {
-	text-align: center;
+		width: 500px;
+		background-color: #ccc;
+		margin: 0 auto;
+		margin-top: 40px;
+		margin-bottom: 40px;
 }
 
 textarea {
-	width: 100%;
-	height: 100px;
-	padding: 10px;
-	border: 1px solid #ccc;
-	border-radius: 4px;
-	font-family: "Raleway", sans-serif;
-	resize: vertical;
-	box-sizing: border-box;
+		width: 100%;
+		height: 150px;
+		padding: 15px;
+		border: 1px solid #ccc;
+		border-radius: 8px;
+		font-family: "Raleway", sans-serif;
+		resize: vertical;
+		box-sizing: border-box;
+		font-size: 1em;
 }
 
 button {
-	padding: 10px 20px;
-	background-color: #2a9d8f;
-	color: #fff;
-	border: none;
-	border-radius: 20px;
-	cursor: pointer;
-	font-family: "Raleway", sans-serif;
-	transition: background-color 0.3s;
+		padding: 15px 25px;
+		background-color: #2a9d8f;
+		color: #fff;
+		border: none;
+		border-radius: 20px;
+		cursor: pointer;
+		font-family: "Raleway", sans-serif;
+		transition: background-color 0.3s;
+		font-size: 1em;
 }
 
 button:hover {
-	background-color: #21867a;
+		background-color: #21867a;
 }
 
 .mood-tracker {
-	display: flex;
-	justify-content: space-between;
-	margin: 20px 0;
+		display: flex;
+		justify-content: space-between;
+		margin: 30px 0;
 }
 
 .mood-box {
-	flex: 1;
-	height: 50px;
-	margin: 0 5px;
-	border-radius: 4px;
-	cursor: pointer;
-	transition: transform 0.2s;
+		flex: 1;
+		height: 60px;
+		margin: 0 10px;
+		border-radius: 12px;
+		cursor: pointer;
+		transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .mood-box:hover {
-	transform: scale(1.1);
+		transform: scale(1.05);
+		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .mood-1 { background-color: #D98880; } 
@@ -270,8 +292,72 @@ button:hover {
 .mood-5 { background-color: #58D68D; }
 
 .mood-label {
-	text-align: center;
-	margin-top: 10px;
-	font-size: 1em;
-	font-family: "Raleway", sans-serif;
+		text-align: center;
+		margin-top: 10px;
+		font-size: 0.9em;
+		font-family: "Raleway", sans-serif;
+}
+
+.tab {
+		position: relative;
+		transition: color 0.3s;
+}
+
+.tab::before {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 0;
+		height: 2px;
+		background-color: transparent;
+		transition: width 0.3s ease-out, background-color 0.3s ease-out;
+}
+
+.tab:hover::before,
+.tab.active::before {
+		width: calc(100% - 30px);
+		background-color: #2a9d8f;
+}
+
+
+#chat-container {
+		display: flex;
+		flex-direction: column;
+		height: 400px;
+		border: 1px solid #ccc;
+		padding: 10px;
+		background-color: #fff;
+}
+
+#chat-box {
+		flex: 1;
+		overflow-y: auto;
+		border: 1px solid #ddd;
+		padding: 10px;
+		margin-bottom: 10px;
+		background-color: #f9f9f9;
+}
+
+#user-input {
+		width: 80%;
+		padding: 10px;
+		border: 1px solid #ccc;
+		border-radius: 4px;
+		margin-right: 10px;
+}
+
+.user-message {
+		background-color: #eee;
+		padding: 10px;
+		border-radius: 10px;
+		margin-bottom: 10px;
+}
+
+.chatbot-message {
+		background-color: #ccc;
+		padding: 10px;
+		border-radius: 10px;
+		margin-bottom: 10px;
 }
